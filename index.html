@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Healy</title>
+</head>
+
+<body>
+    <header>
+        <div class="container  flex-space">
+            <div class="header-left  flex-ac">
+                <a class="no-lh" href="javascript:void(0)"><img src="images/logo.svg" alt="Healy-logo"></a>
+                <h1 class="logo-heading  text-light">Healy</h1>
+            </div>
+            <div class="header-right">
+                <a href="javascript:void(0)">Login</a>
+                <button class="btn-model  text-light">List Your Practice</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container  flex-column">
+                <form class="search  flex-ac" onsubmit="event.preventDefault()">
+                    <div class="search-area  input-box  flex-ac">
+                        <img class="search-icon" src="images/location.svg" alt="area">
+                        <input type="text" class="area" placeholder="Area">
+                        <ul class="suggest-list suggest-area hidden">
+                            <li>Chennai</li>
+                            <li>Vizag</li>
+                            <li>Hyderabad</li>
+                            <li>Bangaluru</li>
+                        </ul>
+                    </div>
+                    <div class="search-hospital  input-box  flex-ac">
+                        <img class="search-icon" src="images/hospital.svg" alt="hospital">
+                        <input type="text" class="hospital" placeholder="Clinics, Hospitals, Doctors etc">
+                        <ul class="suggest-list suggest-hopital hidden">
+                            <li>Apollo Hospital</li>
+                            <li>Fortis Malar Hospital</li>
+                            <li>Kims Hospital</li>
+                            <li>MGM Healthcare</li>
+                        </ul>
+                    </div>
+                    <div class="search-insurance  input-box  flex-ac">
+                        <img class="search-icon" src="images/folder.svg" alt="insurance">
+                        <input type="text" class="insurance" placeholder="Insurance plan and carrier">
+                        <ul class="suggest-list suggest-insurance  hidden">
+                            <li>Max Bupa Health Companion Plan</li>
+                            <li>Apollo Munich Optima Restore Health</li>
+                            <li>Cigna TTK ProHealth Plus</li>
+                            <li>Royal Sundaram Health Lifeline Supreme</li>
+                        </ul>
+                    </div>
+                    <button class="btn-primary"><img class="btn-magni" src="images/magnifier.svg" alt="search"></button>
+                </form>
+                <ul class="feature-list  flex-center">
+                    <li class="feature-list-item  flex-space">
+                        <img src="images/search-hospital.svg" alt="hospital">
+                        <span class="feature-description">Find Clinics and
+                            Hospitals</span>
+                    </li>
+                    <li class="feature-list-item  flex-space">
+                        <img src="images/pills.svg" alt="pills">
+                        <span class="feature-description">Find Pharmacies</span>
+                    </li>
+                    <li class="feature-list-item  flex-space">
+                        <img src="images/medical-history.svg" alt="medical-history">
+                        <span class="feature-description">Read Health
+                            Articles</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="work-process">
+            <div class="container">
+                <h2 class="title-lg">How It Works</h2>
+                <ul class="process  d-flex">
+                    <li class="process-item  flex-column">
+                        <img src="images/search.svg" alt="search">
+                        <h3>Search</h3>
+                        <p>Search for a doctor or health specialist or
+                            enter a particular condition or procedure.
+                            We cover 47 medical specialities.</p>
+                    </li>
+                    <li class="process-item  flex-column">
+                        <img src="images/medical-list.svg" alt="medical-list">
+                        <h3>Compare</h3>
+                        <p>Compare medical centers using verified patient reviews and filter for distance, availability
+                            and insurer to find the right doctor for you.</p>
+                    </li>
+                    <li class="process-item  flex-column">
+                        <img src="images/urgency.svg" alt="urgency">
+                        <h3>Call</h3>
+                        <p>After having found the right doctor and the insurance company, you can place
+                            a phone call to the venue and manage
+                            the booking.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="articles">
+            <div class="container">
+                <h2 class="title-lg  text-light">Read Health Articles</h2>
+                <ul class="health-article  flex-center">
+                    <li class="health-article-card">
+                        <figure class="doctor-img"><img src="images/doctor.png" alt="doctor"></figure>
+                        <div class="card-info  flex-column">
+                            <h3>Top Medical Proffessionals</h3>
+                            <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
+                                fabellas vel. Ea ius nisl detraxit salutatus…</p>
+                            <div class="flex-space">
+                                <span class="name">Dr.John Doe</span>
+                                <a class="read-link" href="javascript:void(0)">Read more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="health-article-card">
+                        <figure class="doctor-img"> <img src="images/doctor.png" alt="doctor"></figure>
+                        <div class="card-info  flex-column">
+                            <h3>Top Medical Proffessionals</h3>
+                            <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
+                                fabellas vel. Ea ius nisl detraxit salutatus…</p>
+                            <div class="flex-space">
+                                <span class="name">Dr.John Doe</span>
+                                <a class="read-link" href="javascript:void(0)">Read more</a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="health-article-card">
+                        <figure class="doctor-img"><img src="images/doctor.png" alt="doctor"></figure>
+                        <div class="card-info  flex-column">
+                            <h3>Top Medical Proffessionals</h3>
+                            <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
+                                fabellas vel. Ea ius nisl detraxit salutatus…</p>
+                            <div class="flex-space">
+                                <span class="name">Dr.John Doe</span>
+                                <a class="read-link" href="javascript:void(0)">Read more</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <button class="btn-slide  btn-slide-left  flex-center"><span class="arrow"></span></button>
+                <button class="btn-slide  btn-slide-right  flex-center"><span class="arrow"></span></button>
+            </div>
+        </section>
+
+        <section class="join-us">
+            <div class="container flex-center">
+                <figure class="iphone-img  no-lh">
+                    <img srcset="images/apple-i7/apple-i-phone-7-silver@2x.png 2x,
+                    images/apple-i7/apple-i-phone-7-silver@3x.png 3x"
+                        src="images/apple-i7/apple-i-phone-7-silver@2x.png" alt="apple-i7">
+                </figure>
+
+                <div class="store  flex-column">
+                    <h2 class="title-lg  text-light">We are launching our
+                        App Soon!</h2>
+                    <div class="store-links d-flex">
+                        <a class="no-lh" href="javascript:void(0)"><img class="store-img"
+                                src="images/google-play/gplay-logo.png" alt="google-play"></a>
+                        <a class="no-lh" href="javascript:void(0)"><img class="store-img"
+                                src="images/app-store/store-logo.png" alt="app-store"></a>
+                    </div>
+
+                    <form class="d-flex" onsubmit="event.preventDefault()">
+                        <input class="input-email  text-light" type="text"
+                            placeholder="Enter Your Email ID For Updates">
+                        <button class="btn-signup">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <ul class="footer-nav  d-flex  text-light">
+                <li>
+                    <ul>
+                        <li>
+                            <h3>ABOUT</h3>
+                        </li>
+                        <li><a href="javascript:void(0)">Press</a></li>
+                        <li><a href="javascript:void(0)">Carrers</a></li>
+                        <li><a href="javascript:void(0)">Jobs</a></li>
+                        <li><a href="javascript:void(0)">Blog</a></li>
+                        <li><a href="javascript:void(0)">Fas</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <li>
+                            <h3>Search By</h3>
+                        </li>
+                        <li><a href="javascript:void(0)">Doctor Name</a></li>
+                        <li><a href="javascript:void(0)">Proffession Name</a></li>
+                        <li><a href="javascript:void(0)">Speciality</a></li>
+                        <li><a href="javascript:void(0)">Procedure</a></li>
+                        <li><a href="javascript:void(0)">Language</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <li>
+                            <h3>Cities</h3>
+                        </li>
+                        <li><a href="javascript:void(0)">Bangalore</a></li>
+                        <li><a href="javascript:void(0)">Bangalore</a></li>
+                        <li><a href="javascript:void(0)">Bangalore</a></li>
+                        <li><a href="javascript:void(0)">Bangalore</a></li>
+                        <li><a href="javascript:void(0)">Bangalore</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <li>
+                            <h3>Are You A Doctot?</h3>
+                        </li>
+                        <li><a href="javascript:void(0)">List Your Practice</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <li>
+                            <h3>Follow Us</h3>
+                        </li>
+                        <li class="social">
+                            <a href="javascript:void(0)"><img class="social-icon" src="images/Social/facebook.svg"
+                                    alt="facebook"></a>
+                            <a href="javascript:void(0)"><img class="social-icon" src="images/Social/instagram.svg"
+                                    alt="instagram"></a>
+                            <a href="javascript:void(0)"><img class="social-icon" src="images/Social/twitter.svg"
+                                    alt="twitter"></a>
+                            <a href="javascript:void(0)"><img class="social-icon" src="images/Social/linkedin.svg"
+                                    alt="linkedin"></a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+
+    <div class="overlay  hidden"></div>
+    <div class="model-box  flex-center  hidden">
+        Thank you for Updating your List.
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
