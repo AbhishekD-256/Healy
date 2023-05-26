@@ -85,6 +85,10 @@ a {
     text-decoration: none;
 }
 
+h3 {
+    font-weight: normal;
+}
+
 button,
 input {
     outline: none;
@@ -205,7 +209,6 @@ header {
 
 .logo-heading {
     font-size: 34px;
-    font-weight: normal;
     letter-spacing: -0.54px;
     text-transform: uppercase;
 }
@@ -300,6 +303,11 @@ header {
     border-radius: 5px;
     box-shadow: 0 11px 22px 0 rgba(0, 0, 0, 0.34);
     flex-direction: column;
+    transition: transform 0.3s ease-out;
+}
+
+.feature-list-item:hover {
+    transform: translateY(-10px);
 }
 
 .feature-list-item img {
@@ -341,16 +349,11 @@ header {
 
 .process-item h3 {
     font-size: 30px;
-    font-weight: normal;
     letter-spacing: 0.19px;
 }
 
 .process p {
     font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
     letter-spacing: 0.18px;
     color: rgba(71, 71, 71, 0.7);
 }
@@ -398,7 +401,6 @@ header {
 
 .health-article-card h3 {
     font-size: 22px;
-    font-weight: normal;
     letter-spacing: 0.28px;
 }
 
@@ -524,7 +526,6 @@ footer {
 .footer-nav h3 {
     font-size: 25px;
     line-height: 0.56;
-    font-weight: normal;
     margin-bottom: 25px;
 }
 
@@ -635,4 +636,14 @@ footer {
 
 .hidden {
     display: none;
+}
+
+.modal-box p {
+    font-size: 20px;
+}
+
+.mail {
+    display: block;
+    color: red;
+    text-shadow: 0 1px 5px red;
 }
