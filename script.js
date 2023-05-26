@@ -1,6 +1,5 @@
-const modelBtn = document.querySelector(".btn-model");
 const overlay = document.querySelector(".overlay");
-const modelBox = document.querySelector(".model-box");
+const modelBox = document.querySelector(".modal-box");
 const inputArea = document.querySelector(".search input");
 
 inputArea.addEventListener("click", function (e) {
