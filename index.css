@@ -97,6 +97,7 @@ button {
 
 body {
     font-family: 'Roboto', sans-serif;
+    color: #474747;
 }
 
 .container {
@@ -109,7 +110,6 @@ body {
     gap: 30px;
     border-radius: 2px;
     padding: 26px 12px;
-    background-color: var(--primary-font-color);
 }
 
 .d-flex {
@@ -153,6 +153,10 @@ body {
     color: var(--primary-font-color);
 }
 
+.bg-light {
+    background-color: var(--primary-font-color);
+}
+
 .pos-rel {
     position: relative;
 }
@@ -172,7 +176,7 @@ header {
 
 .header-right a {
     display: inline-block;
-    color: #ffffff;
+    color: var(--primary-font-color);
     font-size: 25px;
     font-weight: 500;
 }
@@ -271,7 +275,6 @@ header {
     position: absolute;
     top: 80px;
     left: 0;
-    background-color: var(--primary-font-color);
     width: 100%;
     padding: 30px;
     box-shadow: 0 10px 10px #474747;
@@ -290,7 +293,6 @@ header {
     width: 200px;
     height: 200px;
     padding: 22px 24px;
-    background-color: var(--primary-font-color);
     border-radius: 5px;
     box-shadow: 0 11px 22px 0 rgba(0, 0, 0, 0.34);
     flex-direction: column;
@@ -305,7 +307,6 @@ header {
 
 .feature-description {
     font-size: 18px;
-    color: #474747;
 }
 
 /*-----------------------*\
@@ -321,7 +322,6 @@ header {
 }
 
 .work-process h2 {
-    color: #474747;
     margin-bottom: 50px;
 }
 
@@ -341,7 +341,6 @@ header {
     font-size: 30px;
     font-weight: normal;
     letter-spacing: 0.19px;
-    color: #474747;
 }
 
 .process p {
@@ -391,7 +390,6 @@ header {
 
 .health-article-card {
     max-width: 300px;
-    background-color: var(--primary-font-color);
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 15px 22px 0 rgba(0, 0, 0, 0.41);
@@ -401,7 +399,6 @@ header {
     font-size: 22px;
     font-weight: normal;
     letter-spacing: 0.28px;
-    color: #474747;
 }
 
 .health-article-card p {
@@ -413,7 +410,6 @@ header {
 .name {
     font-size: 14px;
     letter-spacing: 0.28px;
-    color: #474747;
 }
 
 .read-link {
@@ -425,7 +421,6 @@ header {
 .btn-slide {
     width: 90px;
     height: 90px;
-    background-color: var(--primary-font-color);
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -567,7 +562,6 @@ footer {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-color: var(--primary-font-color);
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
