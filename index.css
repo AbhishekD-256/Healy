@@ -161,6 +161,10 @@ body {
     position: relative;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /*-----------------------*\
 
  #HEADER
@@ -296,7 +300,6 @@ header {
     border-radius: 5px;
     box-shadow: 0 11px 22px 0 rgba(0, 0, 0, 0.34);
     flex-direction: column;
-    text-align: center;
 }
 
 .feature-list-item img {
@@ -316,7 +319,6 @@ header {
 \*-----------------------*/
 
 .work-process {
-    text-align: center;
     padding: 50px 0;
 
 }
@@ -367,7 +369,6 @@ header {
 }
 
 .articles h2 {
-    text-align: center;
     margin-bottom: 50px;
 }
 
@@ -562,7 +563,6 @@ footer {
     display: inline-block;
     width: 40px;
     height: 40px;
-    text-align: center;
     line-height: 40px;
     border-radius: 50%;
     margin-right: 30px;
