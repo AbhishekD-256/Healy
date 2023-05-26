@@ -153,6 +153,10 @@ body {
     color: var(--primary-font-color);
 }
 
+.pos-rel {
+    position: relative;
+}
+
 /*-----------------------*\
 
  #HEADER
@@ -210,15 +214,12 @@ header {
 
 .hero {
     background: url(images/hero-bg/hero-bg-img.jpg) no-repeat center/cover;
-    position: relative;
     height: 110vh;
     min-height: 700px;
 }
 
 .hero .container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-20%);
+    top: 40%;
     gap: 100px;
 }
 
@@ -236,17 +237,14 @@ header {
 }
 
 .search-area {
-    position: relative;
     width: 264px;
 }
 
 .search-hospital {
-    position: relative;
     width: 519px;
 }
 
 .search-insurance {
-    position: relative;
     width: 436px;
 }
 
@@ -367,8 +365,6 @@ header {
     background-size: cover, 100%;
     background-position: center;
     padding: 50px 0 140px;
-    position: relative;
-
 }
 
 .articles h2 {
