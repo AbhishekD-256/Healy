@@ -644,6 +644,6 @@ footer {
 
 .mail {
     display: block;
-    color: red;
-    text-shadow: 0 1px 5px red;
+    color: green;
+    text-shadow: 0 1px 3px green;
 }

@@ -5,18 +5,24 @@ const signForm = document.querySelector(".js-signup-form");
 const mail = document.querySelector(".mail");
 const inputArea = document.querySelector(".search input");
 
+// open modal-box
+
+signForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (document.querySelector(".input-email").value) {
+    mail.textContent = document.querySelector(".input-email").value;
+    document.querySelector(".input-email").value = "";
+    overlay.classList.remove("hidden");
+    modalBox.classList.remove("hidden");
+  }
+});
+
+// close modal-box
+
 function closeModal() {
   overlay.classList.add("hidden");
   modalBox.classList.add("hidden");
 }
-
-signForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-  mail.textContent = document.querySelector(".input-email").value;
-  document.querySelector(".input-email").value = "";
-  overlay.classList.remove("hidden");
-  modalBox.classList.remove("hidden");
-});
 
 overlay.addEventListener("click", closeModal);
 modelClose.addEventListener("click", closeModal);
