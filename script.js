@@ -1,3 +1,4 @@
+const formSearch = document.querySelector(".search");
 const overlay = document.querySelector(".overlay");
 const modalBox = document.querySelector(".modal-box");
 const modelClose = document.querySelector(".js-model-btn");
@@ -5,6 +6,10 @@ const signForm = document.querySelector(".js-signup-form");
 const mail = document.querySelector(".mail");
 const inputArea = document.querySelector(".search input");
 
+//form prevent
+formSearch.addEventListener("submit", function (e) {
+  e.preventDefault();
+});
 // open modal-box
 
 signForm.addEventListener("submit", function (e) {
