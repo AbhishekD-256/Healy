@@ -110,12 +110,6 @@ body {
     padding: 0 16px;
 }
 
-.input-box {
-    gap: 30px;
-    border-radius: 2px;
-    padding: 26px 12px;
-}
-
 .d-flex {
     display: flex;
 }
@@ -235,8 +229,15 @@ header {
     gap: 100px;
 }
 
+.input-box {
+    gap: 30px;
+    border-radius: 2px;
+    padding: 26px 12px;
+}
+
 .search {
     gap: 5px;
+    margin-bottom: 100px;
 }
 
 .search input {
@@ -366,9 +367,7 @@ header {
 \*-----------------------*/
 
 .articles {
-    background: linear-gradient(242deg, rgb(24, 155, 251, 0.53) -11%, rgba(63, 243, 195, 0.53) 119%), url(images/article-bg.jpg);
-    background-size: cover, 100%;
-    background-position: center;
+    background: linear-gradient(242deg, rgb(24, 155, 251, 0.53) -11%, rgba(63, 243, 195, 0.53) 119%), url(images/article-bg.jpg) no-repeat center/cover;
     padding: 50px 0 140px;
 }
 
@@ -469,6 +468,14 @@ header {
     gap: 150px;
 }
 
+.iphone-img {
+    max-width: 368px;
+}
+
+.iphone-img img {
+    width: 100%;
+}
+
 .store {
     gap: 20px;
 }
@@ -522,6 +529,8 @@ footer {
 
 .footer-nav {
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .footer-nav h3 {
@@ -647,4 +656,33 @@ footer {
     display: block;
     color: green;
     text-shadow: 0 1px 3px green;
+}
+
+/*-------- MEDIA-QUERY---------- */
+
+@media screen and (max-width:1024px) {
+
+    .input-box {
+        gap: 20px;
+        padding: 16px 8px;
+    }
+
+    .search input {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .btn-search {
+        padding: 11px 20px;
+    }
+
+    .magni-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .join-us .container {
+        gap: 50px;
+    }
+
 }
