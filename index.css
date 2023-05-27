@@ -227,6 +227,7 @@ header {
     background: url(images/hero-bg/hero-bg-img.jpg) no-repeat center/cover;
     height: 110vh;
     min-height: 700px;
+    max-height: 900px;
 }
 
 .hero .container {
