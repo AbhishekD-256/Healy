@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <header>
+    <header class="w-100">
         <div class="container  flex-space">
-            <div class="header-left  flex-ac">
+            <div class="header-left  flex-ac ">
                 <a class="no-lh" href="javascript:void(0)"><img src="images/logo.svg" alt="Healy-logo"></a>
                 <a class="logo-heading  text-light" href="javascript:void(0)">Healy</a>
             </div>
@@ -29,8 +29,8 @@
                 <form class="search  flex-ac" onsubmit="event.preventDefault()">
                     <div class="search-area  input-box  flex-ac  pos-rel  bg-light">
                         <img class="search-icon" src="images/location.svg" alt="area">
-                        <input type="text" class="area" placeholder="Area">
-                        <ul class="suggest-list suggest-area  bg-light  hidden">
+                        <input type="text" class="area  w-100" placeholder="Area">
+                        <ul class="suggest-list suggest-area  bg-light  w-100  hidden">
                             <li>Chennai</li>
                             <li>Vizag</li>
                             <li>Hyderabad</li>
@@ -39,8 +39,8 @@
                     </div>
                     <div class="search-hospital  input-box  flex-ac  pos-rel  bg-light">
                         <img class="search-icon" src="images/hospital.svg" alt="hospital">
-                        <input type="text" class="hospital" placeholder="Clinics, Hospitals, Doctors etc">
-                        <ul class="suggest-list suggest-hopital  bg-light  hidden">
+                        <input type="text" class="hospital  w-100" placeholder="Clinics, Hospitals, Doctors etc">
+                        <ul class="suggest-list suggest-hopital  bg-light  w-100  hidden">
                             <li>Apollo Hospital</li>
                             <li>Fortis Malar Hospital</li>
                             <li>Kims Hospital</li>
@@ -49,8 +49,8 @@
                     </div>
                     <div class="search-insurance  input-box  flex-ac  pos-rel  bg-light">
                         <img class="search-icon" src="images/folder.svg" alt="insurance">
-                        <input type="text" class="insurance" placeholder="Insurance plan and carrier">
-                        <ul class="suggest-list  suggest-insurance  bg-light  hidden">
+                        <input type="text" class="insurance  w-100" placeholder="Insurance plan and carrier">
+                        <ul class="suggest-list  suggest-insurance  bg-light  w-100  hidden">
                             <li>Max Bupa Health Companion Plan</li>
                             <li>Apollo Munich Optima Restore Health</li>
                             <li>Cigna TTK ProHealth Plus</li>
@@ -61,16 +61,21 @@
                 </form>
                 <ul class="feature-list  flex-center">
                     <li class="feature-list-item  flex-space  bg-light  text-center">
-                        <img src="images/search-hospital.svg" alt="hospital">
+                        <figure class="feature-img no-lh"> <img class="w-100" src="images/search-hospital.svg"
+                                alt="hospital">
+                        </figure>
                         <span class="feature-description">Find Clinics and
                             Hospitals</span>
                     </li>
                     <li class="feature-list-item  flex-space  bg-light  text-center">
-                        <img src="images/pills.svg" alt="pills">
+                        <figure class="feature-img no-lh"><img class="w-100" src="images/pills.svg" alt="pills">
+                        </figure>
                         <span class="feature-description">Find Pharmacies</span>
                     </li>
                     <li class="feature-list-item  flex-space  bg-light  text-center">
-                        <img src="images/medical-history.svg" alt="medical-history">
+                        <figure class="feature-img no-lh"><img class="w-100" src="images/medical-history.svg"
+                                alt="medical-history">
+                        </figure>
                         <span class="feature-description">Read Health
                             Articles</span>
                     </li>
@@ -111,7 +116,7 @@
                 <h2 class="title-lg  text-light  text-center">Read Health Articles</h2>
                 <ul class="health-article  flex-center">
                     <li class="health-article-card  bg-light">
-                        <figure class="doctor-img"><img src="images/doctor.png" alt="doctor"></figure>
+                        <figure class="doctor-img"><img class="w-100" src="images/doctor.png" alt="doctor"></figure>
                         <div class="card-info  flex-column">
                             <h3>Top Medical Proffessionals</h3>
                             <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
@@ -123,7 +128,7 @@
                         </div>
                     </li>
                     <li class="health-article-card  bg-light">
-                        <figure class="doctor-img"> <img src="images/doctor.png" alt="doctor"></figure>
+                        <figure class="doctor-img"> <img class="w-100" src="images/doctor.png" alt="doctor"></figure>
                         <div class="card-info  flex-column">
                             <h3>Top Medical Proffessionals</h3>
                             <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
@@ -136,7 +141,7 @@
 
                     </li>
                     <li class="health-article-card  bg-light">
-                        <figure class="doctor-img"><img src="images/doctor.png" alt="doctor"></figure>
+                        <figure class="doctor-img"><img class="w-100" src="images/doctor.png" alt="doctor"></figure>
                         <div class="card-info  flex-column">
                             <h3>Top Medical Proffessionals</h3>
                             <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
@@ -157,7 +162,7 @@
         <section class="join-us">
             <div class="container flex-center">
                 <figure class="iphone-img  no-lh">
-                    <img srcset="images/apple-i7/apple-i-phone-7-silver@2x.png 2x,
+                    <img class="w-100" srcset="images/apple-i7/apple-i-phone-7-silver@2x.png 2x,
                     images/apple-i7/apple-i-phone-7-silver@3x.png 3x"
                         src="images/apple-i7/apple-i-phone-7-silver@2x.png" alt="apple-i7">
                 </figure>
@@ -246,7 +251,7 @@
         </div>
     </footer>
 
-    <div class="overlay  hidden"></div>
+    <div class="overlay  hidden  w-100"></div>
     <div class="modal-box  flex-center  text-center  hidden">
         <button class="close-btn  js-model-btn">
             <span class="close-btn-bar"></span>
