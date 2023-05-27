@@ -353,6 +353,10 @@ header {
     letter-spacing: 0.19px;
 }
 
+.process-img {
+    max-height: 100px;
+}
+
 .process p {
     font-size: 20px;
     letter-spacing: 0.18px;
@@ -500,7 +504,7 @@ header {
 }
 
 .store-img {
-    width: 187px;
+    max-width: 187px;
 }
 
 /*-----------------------*\
@@ -673,9 +677,16 @@ footer {
 }
 
 @media screen and (max-width:768px) {
+    .header-right {
+        display: none;
+    }
+
+    .title-lg {
+        font-size: 30px;
+    }
+
     .hero .container {
         top: 35%;
-        padding: 0 40px;
     }
 
     .search {
@@ -690,5 +701,42 @@ footer {
     .search-insurance,
     .btn-search {
         width: 100%;
+    }
+
+    .feature-list {
+        gap: 20px;
+    }
+
+    .feature-list-item {
+        width: 150px;
+        height: 150px;
+    }
+
+    .feature-img {
+        width: 50px;
+    }
+
+    .feature-description {
+        font-size: 14px;
+    }
+
+    .process {
+        gap: 30px;
+    }
+
+    .process-item {
+        gap: 10px;
+    }
+
+    .process-item h3 {
+        font-size: 25px;
+    }
+
+    .process p {
+        font-size: 16px;
+    }
+
+    .join-us .container {
+        flex-direction: column-reverse;
     }
 }
