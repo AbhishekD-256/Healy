@@ -284,10 +284,11 @@ header {
 
 .suggest-list {
     position: absolute;
-    top: 80px;
+    top: 55px;
     left: 0;
     padding: 30px;
     box-shadow: 0 10px 10px #474747;
+    z-index: 10;
 }
 
 .suggest-list li {
@@ -379,6 +380,7 @@ header {
 }
 
 .health-article {
+    overflow: hidden;
     gap: 65px;
 }
 
@@ -388,10 +390,12 @@ header {
 }
 
 .health-article-card {
-    max-width: 300px;
+    width: 300px;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 15px 22px 0 rgba(0, 0, 0, 0.41);
+    transition: all 0.3s ease-in-out;
+    flex-shrink: 0;
 }
 
 .health-article-card h3 {
@@ -674,6 +678,25 @@ footer {
         gap: 50px;
     }
 
+    .btn-slide {
+        width: 50px;
+        height: 50px;
+        top: 90%;
+    }
+
+    .arrow {
+        padding: 5px;
+    }
+
+    .btn-slide-left {
+        left: 30%;
+    }
+
+    .btn-slide-right {
+        right: 30%;
+    }
+
+
 }
 
 @media screen and (max-width:768px) {
@@ -734,6 +757,10 @@ footer {
 
     .process p {
         font-size: 16px;
+    }
+
+    .health-article {
+        gap: 30px;
     }
 
     .join-us .container {
