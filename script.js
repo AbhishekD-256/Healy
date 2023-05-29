@@ -3,6 +3,9 @@ const suggestList = document.querySelectorAll(".suggest-list");
 const inputArea = document.querySelector(".js-area");
 const inputHospital = document.querySelector(".js-hospital");
 const inputInsurance = document.querySelector(".js-insurance");
+const areaSuggestions = document.querySelector(".suggest-area");
+const hospitalSuggestions = document.querySelector(".suggest-hopital");
+const insuranceSuggestions = document.querySelector(".suggest-insurance");
 
 const overlay = document.querySelector(".overlay");
 const modalBox = document.querySelector(".modal-box");
@@ -22,7 +25,29 @@ formSearch.addEventListener("submit", function (e) {
 });
 
 // search suggetions
+inputArea.addEventListener("click", function () {
+  areaSuggestions.classList.remove("hidden");
+});
 
+inputHospital.addEventListener("click", function () {
+  hospitalSuggestions.classList.remove("hidden");
+});
+
+inputInsurance.addEventListener("click", function () {
+  insuranceSuggestions.classList.remove("hidden");
+});
+document.addEventListener("click", function (event) {
+  const clickedElement = event.target;
+  if (
+    clickedElement !== inputArea &&
+    clickedElement !== inputHospital &&
+    clickedElement !== inputInsurance
+  ) {
+    areaSuggestions.classList.add("hidden");
+    hospitalSuggestions.classList.add("hidden");
+    insuranceSuggestions.classList.add("hidden");
+  }
+});
 // open modal-box
 
 signForm.addEventListener("submit", function (e) {
