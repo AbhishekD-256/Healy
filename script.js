@@ -79,12 +79,18 @@ leftBtn.addEventListener("click", function () {
   if (currentPosition > 0) {
     currentPosition--;
     moveCards();
+  } else {
+    currentPosition = articleCards.length;
+    moveCards();
   }
 });
 
 rightBtn.addEventListener("click", function () {
   if (currentPosition < articleCards.length) {
     currentPosition++;
+    moveCards();
+  } else {
+    currentPosition = 0;
     moveCards();
   }
 });
