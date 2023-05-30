@@ -40,7 +40,12 @@ const suggestions = {
   ],
 };
 
+const containedList = [];
 function createList(className, list) {
+  if (containedList.includes(className)) {
+    return;
+  }
+  containedList.push(className);
   list.forEach((li) => {
     const html = `<li>${li}</li>`;
     document
