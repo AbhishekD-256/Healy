@@ -294,6 +294,11 @@ header {
 .suggest-list li {
     font: 25px;
     padding: 10px;
+    cursor: pointer;
+}
+
+.suggest-list li:hover {
+    background-color: #909090;
 }
 
 .feature-list {
