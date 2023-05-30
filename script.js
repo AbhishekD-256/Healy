@@ -9,9 +9,10 @@ const insuranceSuggestions = document.querySelector(".suggest-insurance");
 
 const overlay = document.querySelector(".overlay");
 const modalBox = document.querySelector(".modal-box");
-const modelClose = document.querySelector(".js-model-btn");
+const modelCloseBtn = document.querySelector(".js-model-btn");
 const signForm = document.querySelector(".js-signup-form");
 const mail = document.querySelector(".mail");
+const inputMail = document.querySelector(".input-email");
 
 const leftBtn = document.querySelector(".js-left-btn");
 const rightBtn = document.querySelector(".js-right-btn");
@@ -51,15 +52,16 @@ document.addEventListener("click", function (event) {
     insuranceSuggestions.classList.add("hidden");
   }
 });
+
 // open modal-box
 
 signForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (document.querySelector(".input-email").value) {
-    mail.textContent = document.querySelector(".input-email").value;
-    document.querySelector(".input-email").value = "";
+  document.querySelector("body").style.overflow = "hidden";
+  if (inputMail.value) {
+    mail.textContent = inputMail.value;
+    inputMail.value = "";
     overlay.classList.remove("hidden");
-    modalBox.classList.remove("hidden");
   }
 });
 
@@ -67,11 +69,11 @@ signForm.addEventListener("submit", function (e) {
 
 function closeModal() {
   overlay.classList.add("hidden");
-  modalBox.classList.add("hidden");
+  document.querySelector("body").style.overflow = "visible";
 }
 
 overlay.addEventListener("click", closeModal);
-modelClose.addEventListener("click", closeModal);
+modelCloseBtn.addEventListener("click", closeModal);
 
 // slider component
 

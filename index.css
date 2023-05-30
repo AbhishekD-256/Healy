@@ -588,13 +588,25 @@ footer {
 
 /*----------- MODAL-BOX ------------- */
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
 .modal-box {
     width: 400px;
     height: 400px;
     border-radius: 4px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
     z-index: 111;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -624,18 +636,6 @@ footer {
 
 .close-btn-bar:nth-child(2) {
     transform: rotate(135deg) translateX(21px);
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    z-index: 100;
-    transition: all 0.3s;
-
 }
 
 .hidden {
