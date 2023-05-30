@@ -18,6 +18,9 @@ const rightBtn = document.querySelector(".js-right-btn");
 const articlesList = document.querySelector(".health-article");
 const articleCards = document.querySelectorAll(".health-article-card");
 
+const signInSection = document.querySelector(".js-sign");
+const logInBtn = document.querySelector(".js-btn-login");
+
 //form prevent
 
 formSearch.addEventListener("submit", function (e) {
@@ -102,3 +105,11 @@ function moveCards() {
     }px)`;
   }
 }
+
+// scroll Into sign-in
+
+logInBtn.addEventListener("click", function () {
+  signInSection.scrollIntoView({
+    behavior: "smooth",
+  });
+});
