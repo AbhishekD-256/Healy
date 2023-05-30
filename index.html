@@ -29,32 +29,26 @@
                 <form class="search  flex-ac">
                     <div class="search-area  input-box  flex-ac  pos-rel  bg-light">
                         <img class="search-icon" src="images/location.svg" alt="area">
-                        <input type="text" class="js-area  w-100" placeholder="Area">
+                        <input type="text" class="js-area  js-search-input  w-100" placeholder="Area"
+                            data-searching-value="area">
                         <ul class="suggest-list suggest-area  bg-light  w-100  hidden">
-                            <li>Chennai</li>
-                            <li>Vizag</li>
-                            <li>Hyderabad</li>
-                            <li>Bangaluru</li>
+
                         </ul>
                     </div>
                     <div class="search-hospital  input-box  flex-ac  pos-rel  bg-light">
                         <img class="search-icon" src="images/hospital.svg" alt="hospital">
-                        <input type="text" class="js-hospital  w-100" placeholder="Clinics, Hospitals, Doctors etc">
-                        <ul class="suggest-list suggest-hopital  bg-light  w-100  hidden">
-                            <li>Apollo Hospital</li>
-                            <li>Fortis Malar Hospital</li>
-                            <li>Kims Hospital</li>
-                            <li>MGM Healthcare</li>
+                        <input type="text" class="js-hospital  js-search-input  w-100"
+                            placeholder="Clinics, Hospitals, Doctors etc" data-searching-value="hospital">
+                        <ul class="suggest-list suggest-hospital  bg-light  w-100  hidden">
+
                         </ul>
                     </div>
                     <div class="search-insurance  input-box  flex-ac  pos-rel  bg-light">
                         <img class="search-icon" src="images/folder.svg" alt="insurance">
-                        <input type="text" class="js-insurance  w-100" placeholder="Insurance plan and carrier">
+                        <input type="text" class="js-insurance  js-search-input  w-100"
+                            placeholder="Insurance plan and carrier" data-searching-value="insurance">
                         <ul class="suggest-list  suggest-insurance  bg-light  w-100  hidden">
-                            <li>Max Bupa Health Companion Plan</li>
-                            <li>Apollo Munich Optima Restore Health</li>
-                            <li>Cigna TTK ProHealth Plus</li>
-                            <li>Royal Sundaram Health Lifeline Supreme</li>
+
                         </ul>
                     </div>
                     <button class="btn-search"><img class="magni-img" src="images/magnifier.svg" alt="search"></button>

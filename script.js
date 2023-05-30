@@ -1,11 +1,5 @@
-const formSearch = document.querySelector(".search");
+const searchForm = document.querySelector(".search");
 const suggestList = document.querySelectorAll(".suggest-list");
-const inputArea = document.querySelector(".js-area");
-const inputHospital = document.querySelector(".js-hospital");
-const inputInsurance = document.querySelector(".js-insurance");
-const areaSuggestions = document.querySelector(".suggest-area");
-const hospitalSuggestions = document.querySelector(".suggest-hopital");
-const insuranceSuggestions = document.querySelector(".suggest-insurance");
 
 const overlay = document.querySelector(".overlay");
 const modalBox = document.querySelector(".modal-box");
@@ -24,33 +18,55 @@ const logInBtn = document.querySelector(".js-btn-login");
 
 //form prevent
 
-formSearch.addEventListener("submit", function (e) {
+searchForm.addEventListener("submit", function (e) {
   e.preventDefault();
 });
 
 // search suggetions
-inputArea.addEventListener("click", function () {
-  areaSuggestions.classList.remove("hidden");
-});
 
-inputHospital.addEventListener("click", function () {
-  hospitalSuggestions.classList.remove("hidden");
-});
+const suggestions = {
+  area: ["Chennai", "Vizag", "Hyderabad", "Bangaluru"],
+  hospital: [
+    "Apollo Hospital",
+    "Fortis Malar Hospital",
+    "Kims Hospital",
+    "MGM Healthcare",
+  ],
+  insurance: [
+    "Max Bupa Health Companion Plan",
+    "Apollo Munich Optima Restore Health",
+    "Cigna TTK ProHealth Plus",
+    "Royal Sundaram Health Lifeline Supreme",
+  ],
+};
 
-inputInsurance.addEventListener("click", function () {
-  insuranceSuggestions.classList.remove("hidden");
-});
-document.addEventListener("click", function (event) {
-  const clickedElement = event.target;
-  if (
-    clickedElement !== inputArea &&
-    clickedElement !== inputHospital &&
-    clickedElement !== inputInsurance
-  ) {
-    areaSuggestions.classList.add("hidden");
-    hospitalSuggestions.classList.add("hidden");
-    insuranceSuggestions.classList.add("hidden");
+function createList(className, list) {
+  list.forEach((li) => {
+    const html = `<li>${li}</li>`;
+    document
+      .querySelector(`.${className}`)
+      .insertAdjacentHTML("afterbegin", html);
+  });
+}
+
+document.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".input-box");
+  if (!clicked) {
+    suggestList.forEach((sug) => sug.classList.add("hidden"));
   }
+});
+
+searchForm.addEventListener("click", function (e) {
+  const clicked = e.target;
+  if (!clicked.classList.contains("js-search-input")) return;
+  suggestList.forEach((sug) => sug.classList.add("hidden"));
+  createList(
+    `suggest-${clicked.dataset.searchingValue}`,
+    suggestions[clicked.dataset.searchingValue]
+  );
+  document
+    .querySelector(`.suggest-${clicked.dataset.searchingValue}`)
+    .classList.remove("hidden");
 });
 
 // open modal-box
@@ -68,8 +84,8 @@ signForm.addEventListener("submit", function (e) {
 // close modal-box
 
 function closeModal() {
-  overlay.classList.add("hidden");
   document.querySelector("body").style.overflow = "visible";
+  overlay.classList.add("hidden");
 }
 
 overlay.addEventListener("click", closeModal);
