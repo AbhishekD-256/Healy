@@ -41,10 +41,9 @@ const suggestions = {
 };
 
 const containedList = [];
-function createList(className, list) {
-  if (containedList.includes(className)) {
-    return;
-  }
+function createSuggetionsList(className, list) {
+  if (containedList.includes(className)) return;
+
   containedList.push(className);
   list.forEach((li) => {
     const html = `<li>${li}</li>`;
@@ -54,29 +53,37 @@ function createList(className, list) {
   });
 }
 
-document.addEventListener("click", function (e) {
+function closeListOnDocument(e) {
   const clicked = e.target.closest(".input-box");
   if (!clicked) {
     suggestList.forEach((sug) => sug.classList.add("hidden"));
   }
-});
+}
 
-searchForm.addEventListener("click", function (e) {
+function closeListOnSearch(e) {
   const clicked = e.target;
   if (!clicked.classList.contains("js-search-input")) return;
   suggestList.forEach((sug) => sug.classList.add("hidden"));
-  createList(
+  createSuggetionsList(
     `suggest-${clicked.dataset.searchingValue}`,
     suggestions[clicked.dataset.searchingValue]
   );
   document
     .querySelector(`.suggest-${clicked.dataset.searchingValue}`)
     .classList.remove("hidden");
+}
+
+document.addEventListener("click", function (e) {
+  closeListOnDocument(e);
+});
+
+searchForm.addEventListener("click", function (e) {
+  closeListOnSearch(e);
 });
 
 // open modal-box
 
-signForm.addEventListener("submit", function (e) {
+function openModelBox(e) {
   e.preventDefault();
   document.querySelector("body").style.overflow = "hidden";
   if (inputMail.value) {
@@ -84,6 +91,10 @@ signForm.addEventListener("submit", function (e) {
     inputMail.value = "";
     overlay.classList.remove("hidden");
   }
+}
+
+signForm.addEventListener("submit", function (e) {
+  openModelBox(e);
 });
 
 // close modal-box
@@ -101,26 +112,6 @@ modelCloseBtn.addEventListener("click", closeModal);
 const cardWidth = 300;
 let currentPosition = 0;
 
-leftBtn.addEventListener("click", function () {
-  if (currentPosition > 0) {
-    currentPosition--;
-    moveCards();
-  } else {
-    currentPosition = articleCards.length;
-    moveCards();
-  }
-});
-
-rightBtn.addEventListener("click", function () {
-  if (currentPosition < articleCards.length) {
-    currentPosition++;
-    moveCards();
-  } else {
-    currentPosition = 0;
-    moveCards();
-  }
-});
-
 function moveCards() {
   for (let i = 0; i < articleCards.length; i++) {
     articleCards[i].style.transform = `translateX(-${
@@ -128,6 +119,29 @@ function moveCards() {
     }px)`;
   }
 }
+
+function moveSliderLeft() {
+  if (currentPosition > 0) {
+    currentPosition--;
+    moveCards();
+  } else {
+    currentPosition = articleCards.length;
+    moveCards();
+  }
+}
+
+function moveSliderRight() {
+  if (currentPosition < articleCards.length) {
+    currentPosition++;
+    moveCards();
+  } else {
+    currentPosition = 0;
+    moveCards();
+  }
+}
+
+leftBtn.addEventListener("click", moveSliderLeft);
+rightBtn.addEventListener("click", moveSliderRight);
 
 // scroll Into sign-in
 
