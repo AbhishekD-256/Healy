@@ -657,6 +657,15 @@ footer {
     text-shadow: 0 1px 3px green;
 }
 
+.js-section {
+    transition: all 0.2s ease-in;
+}
+
+.section-hide {
+    opacity: 0;
+    transform: translateY(10%);
+}
+
 /*-------- MEDIA-QUERY---------- */
 
 @media screen and (max-width:1024px) {

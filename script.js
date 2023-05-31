@@ -1,3 +1,5 @@
+"use strict";
+
 const searchForm = document.querySelector(".search");
 const suggestList = document.querySelectorAll(".suggest-list");
 
@@ -149,4 +151,26 @@ logInBtn.addEventListener("click", function () {
   signInSection.scrollIntoView({
     behavior: "smooth",
   });
+});
+
+// Section Reveal on Scroll
+
+const allSections = document.querySelectorAll(".js-section");
+
+function sectionVisible(entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section-hide");
+  observer.unobserve(entry.target);
+}
+
+const sectionObsever = new IntersectionObserver(sectionVisible, {
+  root: null,
+  threshold: 0.15,
+});
+console.log(sectionObsever);
+allSections.forEach((section) => {
+  sectionObsever.observe(section);
+  section.classList.add("section-hide");
 });
