@@ -184,6 +184,12 @@ header a {
     color: var(--primary-font-color);
 }
 
+.header-right {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
 .header-right a {
     display: inline-block;
     font-size: 25px;
@@ -191,14 +197,10 @@ header a {
 }
 
 .practice {
-    display: inline-block;
     padding: 6px 25px;
     border-radius: 1px;
     border: solid 2.5px var(--primary-font-color);
-    margin-left: 50px;
     transition: all 0.2s;
-    font-size: 25px;
-    font-weight: 500;
     background-color: transparent;
 }
 
@@ -216,6 +218,53 @@ header a {
 
 .header-left {
     gap: 25px;
+}
+
+.responsive-nav {
+    display: flex;
+    min-width: 40%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #00c3ff;
+    font-size: 20px;
+    padding: 40px 16px;
+    transition: all 0.3s cubic-bezier(0.31, 0.57, 0.71, 1.26);
+}
+
+.responsive-nav a:hover {
+    color: #3ff3c3;
+}
+
+.res-button {
+    display: none;
+    background-color: transparent;
+}
+
+.res-button .arrow-img {
+    transform: rotate(90deg);
+}
+
+.arrow-img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.responsive-nav button {
+    align-self: flex-end;
+    background-color: transparent;
+}
+
+.responsive-nav .arrow-img {
+    transform: rotate(270deg);
+}
+
+.translate-nav {
+    transform: translateY(-200%);
 }
 
 /*-----------------------*\
@@ -380,7 +429,7 @@ header a {
 \*-----------------------*/
 
 .articles {
-    background: linear-gradient(242deg, rgb(24, 155, 251, 0.53) -11%, rgba(63, 243, 195, 0.53) 119%), url(images/article-bg.jpg) no-repeat center/cover;
+    background: linear-gradient(242deg, rgb(24, 155, 251, 0.53) -11%, rgba(63, 243, 195, 0.53) 119%), url(images/article-bg.jpg) no-repeat center/cover fixed;
     padding: 50px 0 140px;
 }
 
@@ -404,7 +453,6 @@ header a {
     overflow: hidden;
     box-shadow: 0 15px 22px 0 rgba(0, 0, 0, 0.41);
     transition: all 0.3s ease-in-out;
-    /* flex-shrink: 0; */
 }
 
 .health-article-card h3 {
@@ -417,10 +465,6 @@ header a {
     letter-spacing: 0.26px;
     color: rgba(71, 71, 71, 0.54);
 }
-
-/* .doctor-img {
-    width: 300px;
-} */
 
 .name {
     font-size: 14px;
@@ -577,6 +621,10 @@ footer {
     transform: scale(1);
 }
 
+.social {
+    display: flex;
+    gap: 25px;
+}
 
 .social a {
     display: inline-block;
@@ -584,7 +632,6 @@ footer {
     height: 40px;
     line-height: 40px;
     border-radius: 50%;
-    margin-right: 30px;
     transition: all 0.15s ease-in-out;
 }
 
@@ -616,6 +663,7 @@ footer {
 .modal-box {
     width: 400px;
     height: 400px;
+    max-width: 100%;
     border-radius: 4px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
     z-index: 111;
@@ -734,6 +782,10 @@ footer {
         display: none;
     }
 
+    .res-button {
+        display: flex;
+    }
+
     .title-lg {
         font-size: 30px;
     }
@@ -796,4 +848,86 @@ footer {
     .join-us .container {
         flex-direction: column-reverse;
     }
+}
+
+@media screen and (max-width:480px) {
+
+    header {
+        padding: 10px 0;
+    }
+
+    .header-left {
+        gap: 15px;
+    }
+
+    .responsive-nav {
+        padding: 21px 16px;
+    }
+
+    .logo-heading {
+        font-size: 25px;
+    }
+
+    img[alt='Healy-logo'] {
+        width: 30px;
+    }
+
+    .feature-list-item {
+        width: 90px;
+        height: 90px;
+        padding: 11px 12px;
+    }
+
+    .feature-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .feature-description {
+        font-size: 10px;
+    }
+
+    .store h2 {
+        text-align: center;
+    }
+
+    .store-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .store form {
+        display: block;
+    }
+
+    .input-email {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .btn-signup {
+        display: block;
+        width: 100%;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .footer-nav {
+        gap: 30px;
+    }
+
+    .footer-nav h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .footer-nav-link {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
 }

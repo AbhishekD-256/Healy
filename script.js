@@ -178,11 +178,14 @@ allSections.forEach((section) => {
 
 const hero = document.querySelector(".hero");
 const header = document.querySelector("header");
+const resNavBar = document.querySelector(".responsive-nav");
 
 function makeStickyName(entries, observer) {
   const [entry] = entries;
-  if (!entry.isIntersecting) header.classList.add("sticky-nav");
-  else header.classList.remove("sticky-nav");
+  if (!entry.isIntersecting) {
+    header.classList.add("sticky-nav");
+    resNavBar.classList.add("translate-nav");
+  } else header.classList.remove("sticky-nav");
 }
 const headerObserver = new IntersectionObserver(makeStickyName, {
   root: null,
@@ -191,3 +194,16 @@ const headerObserver = new IntersectionObserver(makeStickyName, {
 });
 
 headerObserver.observe(hero);
+
+// responsive navigation
+
+const navOpenBtn = document.querySelector(".js-open-nav");
+const navCloseBtn = document.querySelector(".js-close-nav");
+
+navOpenBtn.addEventListener("click", function () {
+  resNavBar.classList.remove("translate-nav");
+});
+
+navCloseBtn.addEventListener("click", function () {
+  resNavBar.classList.add("translate-nav");
+});
