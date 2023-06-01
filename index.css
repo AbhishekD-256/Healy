@@ -233,6 +233,7 @@ header a {
     font-size: 20px;
     padding: 40px 16px;
     transition: all 0.3s cubic-bezier(0.31, 0.57, 0.71, 1.26);
+    box-shadow: 40px 0 40px #474747;
     display: none;
 }
 
@@ -726,9 +727,28 @@ footer {
 .sticky-nav {
     position: fixed;
     box-shadow: 0px 2px 10px #474747;
-    opacity: 0.9;
-    background-color: #00c3ff;
+    background-color: #ffffff;
     transition: all 0.2s ease-in;
+}
+
+.sticky-nav a {
+    color: #474747;
+}
+
+.sticky-nav .practice {
+    border: solid 2.5px #474747;
+}
+
+.sticky-nav .practice:hover {
+    color: #474747;
+}
+
+.sticky-nav img {
+    filter: brightness(1) invert(0.7);
+}
+
+.sticky-nav .responsive-nav {
+    background-color: var(--primary-font-color);
 }
 
 /*-------- MEDIA-QUERY---------- */
