@@ -233,6 +233,7 @@ header a {
     font-size: 20px;
     padding: 40px 16px;
     transition: all 0.3s cubic-bezier(0.31, 0.57, 0.71, 1.26);
+    display: none;
 }
 
 .responsive-nav a:hover {
@@ -274,7 +275,7 @@ header a {
 \*-----------------------*/
 
 .hero {
-    background: url(images/hero-bg/hero-bg-img.jpg) no-repeat center/cover;
+    background: url(images/hero-bg/hero-bg-img.jpg) no-repeat center/cover fixed;
     height: 110vh;
     min-height: 700px;
     max-height: 1100px;
@@ -782,6 +783,7 @@ footer {
         display: none;
     }
 
+    .responsive-nav,
     .res-button {
         display: flex;
     }
