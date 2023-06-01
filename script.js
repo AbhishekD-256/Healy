@@ -13,7 +13,7 @@ const inputMail = document.querySelector(".input-email");
 const leftBtn = document.querySelector(".js-left-btn");
 const rightBtn = document.querySelector(".js-right-btn");
 const articlesList = document.querySelector(".health-article");
-const articleCards = document.querySelectorAll(".health-article-card");
+const articleCards = document.querySelectorAll(".js-article-card");
 
 const signInSection = document.querySelector(".js-sign");
 const logInBtn = document.querySelector(".js-btn-login");
@@ -111,7 +111,7 @@ modelCloseBtn.addEventListener("click", closeModal);
 
 // slider component
 
-const cardWidth = 300;
+const cardWidth = articleCards[0].offsetWidth;
 let currentPosition = 0;
 
 function moveCards() {
@@ -167,10 +167,27 @@ function sectionVisible(entries, observer) {
 
 const sectionObsever = new IntersectionObserver(sectionVisible, {
   root: null,
-  threshold: 0.15,
+  threshold: 0.17,
 });
-console.log(sectionObsever);
 allSections.forEach((section) => {
   sectionObsever.observe(section);
   section.classList.add("section-hide");
 });
+
+// sticky navbar
+
+const hero = document.querySelector(".hero");
+const header = document.querySelector("header");
+
+function makeStickyName(entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) header.classList.add("sticky-nav");
+  else header.classList.remove("sticky-nav");
+}
+const headerObserver = new IntersectionObserver(makeStickyName, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${header.getBoundingClientRect().height}px`,
+});
+
+headerObserver.observe(hero);
