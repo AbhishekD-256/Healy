@@ -180,17 +180,17 @@ const hero = document.querySelector(".hero");
 const header = document.querySelector("header");
 const resNavBar = document.querySelector(".responsive-nav");
 
-function makeStickyName(entries, observer) {
+function makeStickyNav(entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) {
     header.classList.add("sticky-nav");
     resNavBar.classList.add("translate-nav");
   } else header.classList.remove("sticky-nav");
 }
-const headerObserver = new IntersectionObserver(makeStickyName, {
+const headerObserver = new IntersectionObserver(makeStickyNav, {
   root: null,
-  threshold: 0,
-  rootMargin: `-${header.getBoundingClientRect().height}px`,
+  threshold: 1,
+  rootMargin: `${header.getBoundingClientRect().height}px`,
 });
 
 headerObserver.observe(hero);

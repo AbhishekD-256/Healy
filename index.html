@@ -12,18 +12,18 @@
 <body>
     <header class="w-100">
         <div class="container  flex-space">
-            <div class="header-left  flex-ac ">
+            <div class="header-left  flex-ac  gap-md">
                 <a class="no-lh" href="javascript:void(0)"><img src="images/logo.svg" alt="Healy-logo"></a>
                 <a class="logo-heading" href="javascript:void(0)">Healy</a>
             </div>
-            <div class="header-right">
-                <a href="javascript:void(0)" class="js-btn-login">Login</a>
-                <a href="javascript:void(0)" class="practice">List Your Practice</a>
+            <div class="header-right  flex-center  gap-lg">
+                <a href="javascript:void(0)" class="text-lg  js-btn-login">Login</a>
+                <a href="javascript:void(0)" class="practice  text-lg">List Your Practice</a>
             </div>
 
             <button class="res-button  js-open-nav"><img class="arrow-img" src="images/right-arrow.png"
                     alt="arrow"></button>
-            <div class="responsive-nav  translate-nav">
+            <div class="responsive-nav  flex-center  text-md  gap-md  translate-nav">
                 <button class="js-close-nav"><img class="arrow-img" src="images/right-arrow.png" alt="arrow"></button>
                 <a href="javascript:void(0)" class="js-btn-login">Login</a>
                 <a href="javascript:void(0)">List Your Practice</a>
@@ -35,25 +35,25 @@
         <section class="hero">
             <div class="container  pos-rel">
                 <form class="search  flex-ac">
-                    <div class="search-area  input-box  flex-ac  pos-rel  bg-light">
+                    <div class="search-area  input-box  flex-ac  gap-md  pos-rel  bg-light">
                         <img class="search-icon" src="images/location.svg" alt="area">
-                        <input type="text" class="js-area  js-search-input  w-100" placeholder="Area"
+                        <input type="text" class="js-area  js-search-input  w-100  text-lg" placeholder="Area"
                             data-searching-value="area">
                         <ul class="suggest-list suggest-area  bg-light  w-100  hidden">
 
                         </ul>
                     </div>
-                    <div class="search-hospital  input-box  flex-ac  pos-rel  bg-light">
+                    <div class="search-hospital  input-box  flex-ac  gap-md  pos-rel  bg-light">
                         <img class="search-icon" src="images/hospital.svg" alt="hospital">
-                        <input type="text" class="js-hospital  js-search-input  w-100"
+                        <input type="text" class="js-hospital  js-search-input  w-100  text-lg"
                             placeholder="Clinics, Hospitals, Doctors etc" data-searching-value="hospital">
                         <ul class="suggest-list suggest-hospital  bg-light  w-100  hidden">
 
                         </ul>
                     </div>
-                    <div class="search-insurance  input-box  flex-ac  pos-rel  bg-light">
+                    <div class="search-insurance  input-box  flex-ac  gap-md  pos-rel  bg-light">
                         <img class="search-icon" src="images/folder.svg" alt="insurance">
-                        <input type="text" class="js-insurance  js-search-input  w-100"
+                        <input type="text" class="js-insurance  js-search-input  w-100  text-lg"
                             placeholder="Insurance plan and carrier" data-searching-value="insurance">
                         <ul class="suggest-list  suggest-insurance  bg-light  w-100  hidden">
 
@@ -61,7 +61,7 @@
                     </div>
                     <button class="btn-search"><img class="magni-img" src="images/magnifier.svg" alt="search"></button>
                 </form>
-                <ul class="feature-list  flex-center">
+                <ul class="feature-list  flex-center  gap-lg">
                     <li class="feature-list-item  flex-space  bg-light  text-center">
                         <figure class="feature-img no-lh"> <img class="w-100" src="images/search-hospital.svg"
                                 alt="hospital">
@@ -88,25 +88,26 @@
         <section class="work-process  js-section">
             <div class="container">
                 <h2 class="title-lg  text-center">How It Works</h2>
-                <ul class="process  d-flex  text-center">
-                    <li class="process-item  flex-column">
+                <ul class="process  d-flex  gap-lg  text-center">
+                    <li class="process-item  flex-column  gap-md">
                         <figure class="process-img  no-lh"><img src="images/search.svg" alt="search"></figure>
-                        <h3>Search</h3>
-                        <p>Search for a doctor or health specialist or
+                        <h3 class="text-lg">Search</h3>
+                        <p class="text-md">Search for a doctor or health specialist or
                             enter a particular condition or procedure.
                             We cover 47 medical specialities.</p>
                     </li>
-                    <li class="process-item  flex-column">
+                    <li class="process-item  flex-column  gap-md">
                         <figure class="process-img  no-lh"><img src="images/medical-list.svg" alt="medical-list">
                         </figure>
-                        <h3>Compare</h3>
-                        <p>Compare medical centers using verified patient reviews and filter for distance, availability
+                        <h3 class="text-lg">Compare</h3>
+                        <p class="text-md">Compare medical centers using verified patient reviews and filter for
+                            distance, availability
                             and insurer to find the right doctor for you.</p>
                     </li>
-                    <li class="process-item  flex-column">
+                    <li class="process-item  flex-column  gap-md">
                         <figure class="process-img  no-lh"><img src="images/urgency.svg" alt="urgency"></figure>
-                        <h3>Call</h3>
-                        <p>After having found the right doctor and the insurance company, you can place
+                        <h3 class="text-lg">Call</h3>
+                        <p class="text-md">After having found the right doctor and the insurance company, you can place
                             a phone call to the venue and manage
                             the booking.</p>
                     </li>
@@ -117,13 +118,13 @@
         <section class="articles  pos-rel  js-section">
             <div class="container">
                 <h2 class="title-lg  text-light  text-center">Read Health Articles</h2>
-                <ul class="health-article  flex-space">
+                <ul class="health-article  flex-space  gap-lg">
                     <li class="health-article-card  bg-light  js-article-card">
                         <figure class="doctor-img  no-lh"><img class="w-100" src="images/doctors/doc-1.jpg"
                                 alt="doctor">
                         </figure>
                         <div class="card-info  flex-column">
-                            <h3>Top Medical Proffessionals</h3>
+                            <h3 class="text-md">Top Medical Proffessionals</h3>
                             <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
                                 fabellas vel. Ea ius nisl detraxit salutatus…</p>
                             <div class="flex-space">
@@ -137,7 +138,7 @@
                                 alt="doctor">
                         </figure>
                         <div class="card-info  flex-column">
-                            <h3>Top Medical Proffessionals</h3>
+                            <h3 class="text-md">Top Medical Proffessionals</h3>
                             <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
                                 fabellas vel. Ea ius nisl detraxit salutatus…</p>
                             <div class="flex-space">
@@ -151,7 +152,7 @@
                                 alt="doctor">
                         </figure>
                         <div class="card-info  flex-column">
-                            <h3>Top Medical Proffessionals</h3>
+                            <h3 class="text-md">Top Medical Proffessionals</h3>
                             <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
                                 fabellas vel. Ea ius nisl detraxit salutatus…</p>
                             <div class="flex-space">
@@ -165,7 +166,7 @@
                                 alt="doctor">
                         </figure>
                         <div class="card-info  flex-column">
-                            <h3>Top Medical Proffessionals</h3>
+                            <h3 class="text-md">Top Medical Proffessionals</h3>
                             <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
                                 fabellas vel. Ea ius nisl detraxit salutatus…</p>
                             <div class="flex-space">
@@ -179,7 +180,7 @@
                                 alt="doctor">
                         </figure>
                         <div class="card-info  flex-column">
-                            <h3>Top Medical Proffessionals</h3>
+                            <h3 class="text-md">Top Medical Proffessionals</h3>
                             <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
                                 fabellas vel. Ea ius nisl detraxit salutatus…</p>
                             <div class="flex-space">
@@ -193,7 +194,7 @@
                                 alt="doctor">
                         </figure>
                         <div class="card-info  flex-column">
-                            <h3>Top Medical Proffessionals</h3>
+                            <h3 class="text-md">Top Medical Proffessionals</h3>
                             <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, ad vidit minimum
                                 fabellas vel. Ea ius nisl detraxit salutatus…</p>
                             <div class="flex-space">
@@ -222,7 +223,7 @@
                 <div class="store  flex-column">
                     <h2 class="title-lg  text-light">We are launching our
                         App Soon!</h2>
-                    <div class="store-links d-flex">
+                    <div class="store-links d-flex  gap-md">
                         <a class="no-lh" href="javascript:void(0)"><img class="store-img"
                                 src="images/google-play/gplay-logo.png" alt="google-play"></a>
                         <a class="no-lh" href="javascript:void(0)"><img class="store-img"
@@ -241,52 +242,52 @@
 
     <footer class="js-section">
         <div class="container">
-            <ul class="footer-nav  d-flex  text-light">
+            <ul class="footer-nav  d-flex  gap-lg  text-light">
                 <li>
-                    <h3>ABOUT</h3>
+                    <h3 class="text-lg">ABOUT</h3>
                     <ul>
 
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Press</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Carrers</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Jobs</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Blog</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Fas</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Press</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Carrers</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Jobs</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Blog</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Fas</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <h3>Search By</h3>
+                    <h3 class="text-lg">Search By</h3>
                     <ul>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Doctor Name</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Proffession Name</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Speciality</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Procedure</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Language</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Doctor Name</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Proffession Name</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Speciality</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Procedure</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Language</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <h3>Cities</h3>
+                    <h3 class="text-lg">Cities</h3>
                     <ul>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Bangalore</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Bangalore</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Bangalore</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Bangalore</a></li>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">Bangalore</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Bangalore</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Bangalore</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Bangalore</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Bangalore</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">Bangalore</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <h3>Are You A Doctot?</h3>
+                    <h3 class="text-lg">Are You A Doctot?</h3>
                     <ul>
-                        <li><a class="footer-nav-link" href="javascript:void(0)">List Your Practice</a></li>
+                        <li><a class="footer-nav-link  text-md" href="javascript:void(0)">List Your Practice</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <h3>Follow Us</h3>
+                    <h3 class="text-lg">Follow Us</h3>
                     <ul>
-                        <li class="social">
+                        <li class="social  d-flex">
                             <a class="bg-light  text-center" href="javascript:void(0)"><img class="social-icon"
                                     src="images/Social/facebook.svg" alt="facebook"></a>
                             <a class="bg-light  text-center" href="javascript:void(0)"><img class="social-icon"
@@ -305,11 +306,11 @@
 
     <div class="overlay  w-100  hidden">
         <div class="modal-box  flex-center  text-center">
-            <button class="close-btn  js-model-btn">
+            <button class="close-btn  d-flex  js-model-btn">
                 <span class="close-btn-bar"></span>
                 <span class="close-btn-bar"></span>
             </button>
-            <p>Thank you for Signing up<span class="mail"></span></p>
+            <p class="text-md">Thank you for Signing up<span class="mail"></span></p>
         </div>
     </div>
 

@@ -102,6 +102,7 @@ button {
 body {
     font-family: 'Roboto', sans-serif;
     color: #474747;
+    font-size: 16px;
 }
 
 .container {
@@ -136,8 +137,24 @@ body {
     flex-direction: column;
 }
 
+.gap-lg {
+    gap: 50px;
+}
+
+.gap-md {
+    gap: 30px;
+}
+
 .no-lh {
     line-height: 0;
+}
+
+.text-lg {
+    font-size: 25px;
+}
+
+.text-md {
+    font-size: 20px;
 }
 
 .title-lg {
@@ -184,15 +201,8 @@ header a {
     color: var(--primary-font-color);
 }
 
-.header-right {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-}
-
 .header-right a {
     display: inline-block;
-    font-size: 25px;
     font-weight: 500;
 }
 
@@ -216,21 +226,13 @@ header a {
     text-transform: uppercase;
 }
 
-.header-left {
-    gap: 25px;
-}
-
 .responsive-nav {
-    display: flex;
     min-width: 40%;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
     position: absolute;
     right: 0;
     top: 0;
     background-color: #00c3ff;
-    font-size: 20px;
     padding: 40px 16px;
     transition: all 0.3s cubic-bezier(0.31, 0.57, 0.71, 1.26);
     box-shadow: 40px 0 40px #474747;
@@ -284,11 +286,9 @@ header a {
 
 .hero .container {
     top: 40%;
-    gap: 100px;
 }
 
 .input-box {
-    gap: 30px;
     border-radius: 2px;
     padding: 26px 12px;
 }
@@ -296,10 +296,6 @@ header a {
 .search {
     gap: 5px;
     margin-bottom: 100px;
-}
-
-.search input {
-    font-size: 25px;
 }
 
 .search input::placeholder {
@@ -356,10 +352,6 @@ header a {
     background-color: #e8e8e8;
 }
 
-.feature-list {
-    gap: 50px;
-}
-
 .feature-list-item {
     width: 200px;
     height: 200px;
@@ -398,7 +390,6 @@ header a {
 }
 
 .process {
-    gap: 50px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -406,12 +397,6 @@ header a {
 .process-item {
     max-width: 380px;
     align-items: center;
-    gap: 35px;
-}
-
-.process-item h3 {
-    font-size: 30px;
-    letter-spacing: 0.19px;
 }
 
 .process-img {
@@ -419,7 +404,6 @@ header a {
 }
 
 .process p {
-    font-size: 20px;
     letter-spacing: 0.18px;
     color: rgba(71, 71, 71, 0.7);
 }
@@ -441,7 +425,6 @@ header a {
 
 .health-article {
     overflow: hidden;
-    gap: 65px;
 }
 
 .card-info {
@@ -457,26 +440,19 @@ header a {
     transition: all 0.3s ease-in-out;
 }
 
-.health-article-card h3 {
-    font-size: 22px;
-    letter-spacing: 0.28px;
-}
-
-.health-article-card p {
-    font-size: 13px;
-    letter-spacing: 0.26px;
-    color: rgba(71, 71, 71, 0.54);
-}
-
+.health-article-card p,
+.read-link,
 .name {
     font-size: 14px;
     letter-spacing: 0.28px;
 }
 
 .read-link {
-    font-size: 14px;
-    letter-spacing: 0.28px;
     color: #13ba8e;
+}
+
+.health-article-card p {
+    color: rgba(71, 71, 71, 0.54);
 }
 
 .btn-slide {
@@ -552,18 +528,12 @@ header a {
 .btn-signup {
     color: #0bb185;
     font-family: Roboto, sans-serif;
-    font-size: 14px;
     font-weight: bold;
-    line-height: 1;
     letter-spacing: -0.32px;
     padding: 18px 36px;
     background-color: #ffffff;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-}
-
-.store-links {
-    gap: 35px;
 }
 
 .store-img {
@@ -584,20 +554,16 @@ footer {
 .footer-nav {
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 50px;
 }
 
 .footer-nav h3 {
-    font-size: 25px;
     line-height: 0.56;
     margin-bottom: 25px;
 }
 
 .footer-nav-link {
-    font-size: 22px;
     line-height: 1.82;
     color: #00f1b7;
-    transition: all 0.2s;
     position: relative;
     transition: all 0.3s ease-in-out;
 }
@@ -624,7 +590,6 @@ footer {
 }
 
 .social {
-    display: flex;
     gap: 25px;
 }
 
@@ -681,7 +646,6 @@ footer {
     position: absolute;
     top: 10px;
     right: 0;
-    display: flex;
 }
 
 .close-btn-bar {
@@ -703,10 +667,6 @@ footer {
 
 .hidden {
     display: none;
-}
-
-.modal-box p {
-    font-size: 20px;
 }
 
 .mail {
@@ -731,16 +691,13 @@ footer {
     transition: all 0.2s ease-in;
 }
 
+.sticky-nav .practice:hover,
 .sticky-nav a {
     color: #474747;
 }
 
 .sticky-nav .practice {
     border: solid 2.5px #474747;
-}
-
-.sticky-nav .practice:hover {
-    color: #474747;
 }
 
 .sticky-nav img {
@@ -756,7 +713,6 @@ footer {
 @media screen and (max-width:1024px) {
 
     .input-box {
-        gap: 20px;
         padding: 16px 8px;
     }
 
@@ -799,6 +755,14 @@ footer {
 }
 
 @media screen and (max-width:768px) {
+    .gap-lg {
+        gap: 30px;
+    }
+
+    .gap-md {
+        gap: 15px;
+    }
+
     .header-right {
         display: none;
     }
@@ -806,10 +770,6 @@ footer {
     .responsive-nav,
     .res-button {
         display: flex;
-    }
-
-    .title-lg {
-        font-size: 30px;
     }
 
     .hero .container {
@@ -830,10 +790,6 @@ footer {
         width: 100%;
     }
 
-    .feature-list {
-        gap: 20px;
-    }
-
     .feature-list-item {
         width: 150px;
         height: 150px;
@@ -847,39 +803,30 @@ footer {
         font-size: 14px;
     }
 
-    .process {
-        gap: 30px;
-    }
-
-    .process-item {
-        gap: 10px;
-    }
-
-    .process-item h3 {
-        font-size: 25px;
-    }
-
-    .process p {
-        font-size: 16px;
-    }
-
-    .health-article {
-        gap: 30px;
-    }
-
     .join-us .container {
         flex-direction: column-reverse;
+    }
+
+    .store {
+        align-items: center;
     }
 }
 
 @media screen and (max-width:480px) {
+    .title-lg {
+        font-size: 30px;
+    }
+
+    .text-lg {
+        font-size: 20px;
+    }
+
+    .text-md {
+        font-size: 16px;
+    }
 
     header {
         padding: 10px 0;
-    }
-
-    .header-left {
-        gap: 15px;
     }
 
     .responsive-nav {
@@ -916,39 +863,34 @@ footer {
     .store-links {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
     }
 
     .store form {
         display: block;
     }
 
-    .input-email {
+    .input-email,
+    .btn-signup {
         display: block;
         width: 100%;
+    }
+
+    .input-email {
         margin-bottom: 20px;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
 
     .btn-signup {
-        display: block;
-        width: 100%;
         border-top-left-radius: 3px;
         border-bottom-left-radius: 3px;
     }
 
-    .footer-nav {
-        gap: 30px;
-    }
-
     .footer-nav h3 {
-        font-size: 20px;
         margin-bottom: 15px;
     }
 
     .footer-nav-link {
-        font-size: 16px;
         line-height: 1.5;
     }
 
