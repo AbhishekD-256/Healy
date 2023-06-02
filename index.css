@@ -220,7 +220,7 @@ header a {
     transform: translateY(-5px);
 }
 
-.logo-heading {
+.logo-title {
     font-size: 34px;
     letter-spacing: -0.54px;
     text-transform: uppercase;
@@ -693,15 +693,20 @@ footer {
 
 .sticky-nav .practice:hover,
 .sticky-nav a {
-    color: #474747;
+    color: #00c3ff;
 }
 
 .sticky-nav .practice {
-    border: solid 2.5px #474747;
+    border: solid 2.5px #00c3ff;
+}
+
+.sticky-nav .logo-fill {
+    fill: #00c3ff;
 }
 
 .sticky-nav img {
-    filter: brightness(1) invert(0.7);
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+
 }
 
 .sticky-nav .responsive-nav {
@@ -833,11 +838,11 @@ footer {
         padding: 21px 16px;
     }
 
-    .logo-heading {
+    .logo-title {
         font-size: 25px;
     }
 
-    img[alt='Healy-logo'] {
+    .logo {
         width: 30px;
     }
 
